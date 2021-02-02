@@ -4,4 +4,5 @@
 - Express
 - Graphql
 - Prisma
-- Prettier# GETP-boilerplate
+- Prettier
+- dotenv
