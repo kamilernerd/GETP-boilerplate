@@ -1,0 +1,6 @@
+{
+  "ignore": ["node_modules/*"],
+  "delay": "2",
+  "restartable": "rs",
+  "ext": "js,json,ts,graphql"
+}
