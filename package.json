@@ -33,7 +33,7 @@
     "start:dev": "BUILD_ENV=dev node index.ts",
     "start:prod": "BUILD_ENV=prod node index.ts",
     "build:dev": "BUILD_ENV=dev npx tsc && yarn run copy-files",
-    "build:prod": "BUILD_ENV=prod npx tsc",
+    "build:prod": "BUILD_ENV=prod npx tsc && yarn run copy-files",
     "prettier": "prettier --write '**/*.ts'",
     "copy-files": "ncp src/graphql/schema/ dist/src/graphql/schema/"
   }
