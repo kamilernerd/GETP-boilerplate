@@ -15,13 +15,16 @@
     "dotenv": "^8.2.0",
     "graphql-import-node": "^0.0.4",
     "graphql-tools": "^7.0.2",
+    "ncp": "^2.0.0",
     "nodemon": "^2.0.7",
     "prettier": "^2.2.1",
     "ts-node": "^9.1.1",
     "typescript": "^4.1.3"
   },
   "dependencies": {
+    "@prisma/client": "^2.14.0",
     "apollo-server-express": "^2.19.1",
+    "crypto-js": "^4.0.0",
     "express": "^4.17.1",
     "graphql": "^15.4.0"
   },
@@ -29,8 +32,9 @@
     "start:dev:watch": "BUILD_ENV=dev nodemon index.ts",
     "start:dev": "BUILD_ENV=dev node index.ts",
     "start:prod": "BUILD_ENV=prod node index.ts",
-    "build:dev": "BUILD_ENV=dev npx tsc",
-    "build:prod": "BUILD_ENV=prod npx tsc",
-    "prettier": "prettier --write '**/*.ts'"
+    "build:dev": "BUILD_ENV=dev npx tsc && yarn run copy-files",
+    "build:prod": "BUILD_ENV=prod npx tsc && yarn run copy-files",
+    "prettier": "prettier --write '**/*.ts'",
+    "copy-files": "ncp src/graphql/schema/ dist/src/graphql/schema/"
   }
 }
