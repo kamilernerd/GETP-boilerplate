@@ -4,5 +4,3 @@
 - Express
 - Graphql
 - Prisma
-- Prettier
-- dotenv
